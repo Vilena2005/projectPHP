@@ -1,0 +1,44 @@
+.bg-img-contact {
+    background-image: url(../img/bg-contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.title-text {
+    color: #F7F7F7;
+} 
+.preview-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+.title {
+    text-align: center;
+}
+.title-text {
+    width: 50%;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    gap: 30px;
+    color: #F7F7F7;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+.contacts-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-block-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

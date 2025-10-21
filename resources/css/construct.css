@@ -1,0 +1,136 @@
+.bg-img-construct {
+    background-image: url(../img/constructor-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.title-text {
+    color: #F7F7F7;
+}
+.preview-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+.title {
+    text-align: center;
+}
+.title-text {
+    width: 50%;
+    text-align: center;
+}
+
+
+.calculator {
+    height: 400px;
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.square {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.square-item {
+    display: flex;
+    border:solid #060606 1px;
+    justify-content: space-around;
+    height: 105px;
+    align-items: center;
+}
+.square-item-text {
+    width: 270px;
+}
+.square-interact {
+    width: 30%;
+}
+.square-form {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 30px;
+}
+.plan-img {
+    display: flex;
+    border: solid  #060606 2px;
+    width: 35%;
+    height: 380px;
+    align-items: center;
+    justify-content: center;
+}
+.add {
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional-options-container {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 30px;
+}
+.additional-options-items {
+    display: flex;
+    border:solid #060606 1px ;
+    height: 105px;
+    align-items: center;
+    padding-left: 60px;
+    gap: 30px;
+}
+.checkbox-name {
+    font-family: 'Inter';
+    font-size: 18px;
+}
+.additional-text-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.additional-text-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+.additional-text {
+    font-size: 16px;
+}
+
+
+
+.standart-container {
+    width: 35%;
+    border: solid #060606 1px;
+}
+.standart-package-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #060606;
+    color: #F7F7F7;
+    height: 120px;
+}
+.standart-package-text {
+    text-align: center;
+}
+.standart-package-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+
+.cost {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.total-cost {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}

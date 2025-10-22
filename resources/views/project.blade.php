@@ -14,7 +14,7 @@
     <div class="modal-window-wrap" id="modalWrapper">
         <div class="modal-window" id="modalWindow">
             <div class="request-wrap">
-                <form class="modal-form">
+                <form method="post" class="modal-form">
                     <input type="text" class="modal-form-text" placeholder="Ваш город">
                     <input type="text" class="modal-form-text" placeholder="ФИО" >
                     <input type="tel" class="modal-form-text" placeholder="Телефон">

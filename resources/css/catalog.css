@@ -7,7 +7,7 @@
 }
 .title-text {
     color: #F7F7F7;
-} 
+}
 .preview-items {
     display: flex;
     flex-direction: column;
@@ -22,8 +22,6 @@
     width: 50%;
     text-align: center;
 }
-
-
 .search-wrap {
     display: flex;
     justify-content: center;

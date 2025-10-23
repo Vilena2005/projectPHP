@@ -1,5 +1,5 @@
-.bg-img-contact {
-    background-image: url(../img/bg-contact.jpg);
+.bg-img {
+    background-image: url(../../resources/img/bg-contact.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -7,7 +7,7 @@
 }
 .title-text {
     color: #F7F7F7;
-} 
+}
 .preview-items {
     display: flex;
     flex-direction: column;

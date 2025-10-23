@@ -1,5 +1,5 @@
-.bg-img-catalog {
-    background-image: url(../img/catalog-bg.jpg);
+.bg-img {
+    background-image: url(../../resources/img/catalog-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

@@ -1,5 +1,5 @@
-.bg-img-project {
-    background-image: url(../img/bg-project.jpg);
+.bg-img {
+    background-image: url(../../resources/img/bg-project.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

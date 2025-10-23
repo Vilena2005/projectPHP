@@ -1,5 +1,5 @@
-.bg-img-about {
-    background-image: url(../img/contact-bg.png);
+.bg-img {
+    background-image: url(../../resources/img/contact-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -7,7 +7,7 @@
 }
 .title-text {
     color: #F7F7F7;
-} 
+}
 .preview-items {
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
 }
 .founder-pic {
     width: 40%;
-    
+
 }
 .founder-text {
     width: 50%;

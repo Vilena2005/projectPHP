@@ -104,7 +104,7 @@ label {
 .contact-form-wrap {
     height: 40px;
     width: 40px;
-    background-image: url(../../resources/img/icons/message-icon.png);
+    background-image: url(../img/icons/message-icon.png);
     background-size: cover;
     background-color: transparent;
     border: transparent;
@@ -113,7 +113,7 @@ label {
 .user-logo {
     height: 40px;
     width: 40px;
-    background-image: url(../../resources/img/icons/user-icon.png);
+    background-image: url(../img/icons/user-icon.png);
     background-size: cover;
     background-color: transparent;
     border: transparent;
@@ -249,4 +249,9 @@ label {
     color: #F7F7F7;
     border: solid #F7F7F7 1px;
     padding: 10px 25px;
+}
+
+
+.error-message {
+    color: red;
 }

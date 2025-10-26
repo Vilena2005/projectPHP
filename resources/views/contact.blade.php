@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <title>Контакты</title>
+@endsection
+
 @section('css_file')
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 @endsection

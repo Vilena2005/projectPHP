@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('role names', function (Blueprint $table) {
             $table->id();
-            $table->string('role_name');
+            $table->string('role_name')->default(1);
         });
     }
 

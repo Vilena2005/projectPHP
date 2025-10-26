@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <title>Главная страница</title>
+@endsection
+
 @section('css_file')
     <link rel="stylesheet" href="{{ asset('css/main-screen.css') }}">
 @endsection
@@ -20,7 +24,7 @@
                 </section>
                 <section class="we-etude">
                     <div class="we-etude-items">
-                        <img src="../img/2_pic_main.png" alt="2 pictures" class="we-etude-pic">
+                        <img src=" {{ asset('img/2_pic_main.png') }} " alt="2 pictures" class="we-etude-pic">
                         <div class="we-etude-text">
                             <h2 class="we-etude-title">МЫ ETUDE</h2>
                             <p class="we-etude-story">Студия дизайна интерьера и архитектуры, которая разрабатывает
@@ -42,22 +46,22 @@
                         <h2 class="numbers-title">ПОЧЕМУ НУЖНО ВЫБРАТЬ ИМЕННО НАС</h2>
                         <div class="numbers-items">
                             <div class="numbers-column">
-                                <img src="../img/icon-with-you.svg" alt="icon-with-you">
+                                <img src=" {{ asset('img/icon-with-you.svg') }} " alt="icon-with-you">
                                 <h2 class="number-title">5</h2>
                                 <p class="number-text">лет<br>на рынке</p>
                             </div>
                             <div class="numbers-column">
-                                <img src="../img/icon-project.svg" alt="icon-project">
+                                <img src="{{asset('img/icon-project.svg')}}" alt="icon-project">
                                 <h2 class="number-title">80+</h2>
                                 <p class="number-text">реализованных<br>проектов</p>
                             </div>
                             <div class="numbers-column">
-                                <img src="../img/icon-partners.svg" alt="icon-partners">
+                                <img src="{{asset('img/icon-partners.svg')}}" alt="icon-partners">
                                 <h2 class="number-title">9</h2>
                                 <p class="number-text">компаний<br>партнеров</p>
                             </div>
                             <div class="numbers-column">
-                                <img src="../img/icon-employee.svg" alt="icon-employee">
+                                <img src="{{asset('img/icon-employee.svg')}}" alt="icon-employee">
                                 <h2 class="number-title">17</h2>
                                 <p class="number-text">опытных<br>сотрудников</p>
                             </div>
@@ -77,15 +81,15 @@
                                     продуманном дизайне.</p>
                             </div>
                             <div class="projects-img-container">
-                                <img src="../img/main_menu_hall.jpg" alt="first-img" class="project-img">
+                                <img src="{{asset('img/main_menu_hall.jpg')}}" alt="first-img" class="project-img">
                                 <div class="projects-img-container-two">
-                                    <img src="../img/main-menu-office.jpg" alt="second-img" class="project-img-two">
-                                    <img src="../img/main-menu-restroom.jpg" alt="third-img" class="project-img-two">
+                                    <img src="{{asset('img/main-menu-office.jpg')}}" alt="second-img" class="project-img-two">
+                                    <img src="{{asset('img/main-menu-restroom.jpg')}}" alt="third-img" class="project-img-two">
                                 </div>
-                                <img src="../img/main_menu_kitchen.jpg" alt="fourth-img" class="project-img">
+                                <img src="{{asset('img/main_menu_kitchen.jpg')}}" alt="fourth-img" class="project-img">
                             </div>
                             <div class="button-container">
-                                <a href="catalog.blade.php" class="button-catalog">В КАТАЛОГ</a>
+                                <a href="catalog" class="button-catalog">В КАТАЛОГ</a>
                             </div>
                         </div>
                     </section>

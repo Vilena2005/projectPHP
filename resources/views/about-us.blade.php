@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <title>О нас</title>
+@endsection
+
 @section('css_file')
     <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
 @endsection
@@ -40,7 +44,7 @@
                                 Именно поэтому мы относимся к каждому проекту с особой
                                 тщательностью, вкладывая в него частичку своей души.</p>
                         </div>
-                        <img src="../img/founder.jpg" alt="founder-pic" class="founder-pic">
+                        <img src="{{asset('img/founder.jpg')}}" alt="founder-pic" class="founder-pic">
                     </div>
                 </section>
             </div>
@@ -51,7 +55,7 @@
                             <h2 class="philosophy-title">ФИЛОСОФИЯ НАШЕЙ КОМПАНИИ</h2>
                             <div class="philosophy-columns">
                                 <div class="philosophy-column">
-                                    <img src="../img/sofa-icon.svg" alt="icon-sofa" class="philosophy-img">
+                                    <img src="{{asset('img/sofa-icon.svg')}}" alt="icon-sofa" class="philosophy-img">
                                     <p class="philosophy-column-title">Гармония пространства</p>
                                     <p class="philosophy-text">Мы верим, что интерьер должен находиться
                                         в балансе с окружающей средой. Используя натуральные материалы,
@@ -60,7 +64,7 @@
                                         благополучию.</p>
                                 </div>
                                 <div class="philosophy-column">
-                                    <img src="../img/light-icon.svg" alt="icon-light" class="philosophy-img">
+                                    <img src="{{asset('img/light-icon.svg')}}" alt="icon-light" class="philosophy-img">
                                     <p class="philosophy-column-title">Функциональность и эстетика.</p>
                                     <p class="philosophy-text"> Мы верим, что идеальный интерьер должен
                                         быть не только визуально привлекательным, но и максимально
@@ -69,7 +73,7 @@
                                         для повседневной жизни.</p>
                                 </div>
                                 <div class="philosophy-column">
-                                    <img src="../img/vase-icon.svg" alt="icon-vase" class="philosophy-img">
+                                    <img src="{{asset('img/vase-icon.svg')}}" alt="icon-vase" class="philosophy-img">
                                     <p class="philosophy-column-title">Вдохновение и творчество</p>
                                     <p class="philosophy-text">Черпая вдохновение из красоты и естественных
                                         форм окружающего мира, мы разрабатываем интерьеры, которые позволяют
@@ -85,7 +89,7 @@
                 <section class="employee">
                     <div class="employee-container">
                         <h2 class="employee-title">НАШИ СОТРУДНИКИ</h2>
-                        <img src="../img/Team.png" alt="team-img" class="employee-img">
+                        <img src="{{asset('img/Team.png')}}" alt="team-img" class="employee-img">
 
                     </div>
                 </section>

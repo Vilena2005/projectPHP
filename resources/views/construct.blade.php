@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <title>Калькулятор</title>
+@endsection
+
 @section('css_file')
     <link rel="stylesheet" href="{{ asset('css/construct.css') }}">
 @endsection
@@ -46,7 +50,7 @@
                         </div>
                     </div>
                     <div class="plan-img">
-                        <img src="../img/plan.png" alt="plan">
+                        <img src="{{asset('img/plan.png')}}" alt="plan">
                     </div>
                 </section>
                 <section class="additional-options">

@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etude</title>
+    @yield('title')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
     @yield('css_file')
-    <script defer src="../../public/js/script.js"></script>
+    <script defer src="{{asset('js/script.js')}}"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -28,7 +30,7 @@
                         <button class="btn-submit">ОПРАВИТЬ ЗАЯВКУ</button>
                     </div>
                 </form>
-                <img src="../img/modal-img.png" alt="modal-img">
+                <img src="{{asset('img/modal-img.png')}}" alt="modal-img">
             </div>
         </div>
     </div>
@@ -37,15 +39,15 @@
         <header>
             <div class="container">
                 <div class="header-items">
-                    <a href="/" class="logo">
+                    <a href="home" class="logo">
                         <img src=" {{ asset('img/Logo-Etude-white.svg') }} " alt="Etude">
                     </a>
                     <nav class="header-menu">
-                        <a href="main-screen.blade.php" class="header-menu-item">Главная</a>
                         <a href="catalog" class="header-menu-item">Каталог</a>
                         <a href="calculator" class="header-menu-item">Калькулятор</a>
                         <a href="contact" class="header-menu-item">Контакты</a>
                         <a href="about" class="header-menu-item">О нас</a>
+                        <a href="review" class="header-menu-item">Отзывы</a>
                     </nav>
                     <div class="link-wrap">
                         <div class="request">
@@ -67,11 +69,11 @@
             <div class="footer-color">
                 <div class="container">
                     <div class="footer-container">
-                        <a href="main-screen.blade.php" class="logo">
-                            <img src="../img/Logo-Etude-white.svg" alt="Etude">
+                        <a href="home" class="logo">
+                            <img src="{{asset('img/Logo-Etude-white.svg')}}" alt="Etude">
                         </a>
                         <nav class="footer-menu">
-                            <a href="main-screen.blade.php" class="footer-menu-item">Главная</a>
+                            <a href="home" class="footer-menu-item">Главная</a>
                             <a href="catalog" class="footer-menu-item">Каталог</a>
                             <a href="calculator" class="footer-menu-item">Калькулятор</a>
                             <a href="contact" class="footer-menu-item">Контакты</a>

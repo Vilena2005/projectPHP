@@ -9,7 +9,7 @@
         <div class="container">
             <section class="registration">
                 <h2>Авторизация</h2>
-                <form action="{{route('login')}}" method="post" class="modal-form">
+                <form action="{{ route('login') }}" method="post" class="modal-form">
                     @csrf
 
                     <input type="text" name="login" class="modal-form-text" placeholder="Логин">

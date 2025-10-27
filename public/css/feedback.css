@@ -25,22 +25,52 @@ header {
     gap: 30px;
     margin: 50px ;
 }
-.container {
+.review-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+    gap: 30px;
+}
+
+.feedbacks {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 50px 0 50px;
+}
+.feedback-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.feedback-section > a {
+    text-decoration: underline;
+}
+.feedback-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border:  solid #060606 2px;
+    padding: 30px 50px ;
+}
+.feedback-item > p {
+    width: 100%;
+}
+.post-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.post-change {
+    display: flex;
+    gap: 10px;
 }
 form > div {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-.review-form {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 
-}
+
+

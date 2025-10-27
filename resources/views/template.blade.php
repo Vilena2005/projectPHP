@@ -43,11 +43,11 @@
                         <img src=" {{ asset('img/Logo-Etude-white.svg') }} " alt="Etude">
                     </a>
                     <nav class="header-menu">
-                        <a href="catalog" class="header-menu-item">Каталог</a>
-                        <a href="calculator" class="header-menu-item">Калькулятор</a>
-                        <a href="contact" class="header-menu-item">Контакты</a>
-                        <a href="about" class="header-menu-item">О нас</a>
-                        <a href="review" class="header-menu-item">Отзывы</a>
+                        <a href="{{ route('catalog') }}" class="header-menu-item">Каталог</a>
+                        <a href="{{route('calculator')}}" class="header-menu-item">Калькулятор</a>
+                        <a href="{{ route('contact') }}" class="header-menu-item">Контакты</a>
+                        <a href="{{ route('about') }}" class="header-menu-item">О нас</a>
+                        <a href="{{ route('feedback') }}" class="header-menu-item">Отзывы</a>
                     </nav>
                     <div class="link-wrap">
                         <div class="request">
@@ -73,11 +73,11 @@
                             <img src="{{asset('img/Logo-Etude-white.svg')}}" alt="Etude">
                         </a>
                         <nav class="footer-menu">
-                            <a href="home" class="footer-menu-item">Главная</a>
                             <a href="catalog" class="footer-menu-item">Каталог</a>
                             <a href="calculator" class="footer-menu-item">Калькулятор</a>
                             <a href="contact" class="footer-menu-item">Контакты</a>
                             <a href="about" class="footer-menu-item">О нас</a>
+                            <a href="feedback" class="header-menu-item">Отзывы</a>
                         </nav>
                         <div class="footer-contacts">
                             <p class="footer-contacts-item">+ 7 901 578 12 98</p>

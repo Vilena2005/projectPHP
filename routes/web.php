@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,7 +21,7 @@ Route::get('/about', function () {
     return view('about-us');
 })->name('about');
 
-Route::get('/calculator', function () {
+Route::get('/construct', function () {
     return view('construct');
 })->name('calculator');
 
@@ -46,20 +47,20 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::get('/review', [\App\Http\Controllers\PostController::class, 'makeReview'])->name('review');
+Route::get('/posts/feedback', function () {
+    return view('feedback');
+})->name('feedback');
+
+//Просмотр отзывов
+Route::get('/posts/feedback', [\App\Http\Controllers\PostController::class, 'index'])->name('feedback');
 
 Route::middleware('guest')->group(function () {
-
     Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
-
     Route::post('/login', [\App\Http\Controllers\Auth\AuthController::class, 'login'])->name('login');
-
-
-
-
 });
+
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [\App\Http\Controllers\Auth\LogoutController::class, 'logout'])->name('logout');
-    //Создание отзыва
-    Route::post('/posts/create', [\App\Http\Controllers\PostController::class, 'create'])->name('post');
+    Route::get('/posts/post', [\App\Http\Controllers\PostController::class, 'create'])->name('create');
+    Route::post('/posts/post', [\App\Http\Controllers\PostController::class, 'store'])->name('store');
 });

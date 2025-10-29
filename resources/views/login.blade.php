@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <title>Вход</title>
+@endsection
+
 @section('css_file')
     <link rel="stylesheet" href="{{ asset('css/user.css') }}">
 @endsection

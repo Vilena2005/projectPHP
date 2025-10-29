@@ -12,7 +12,6 @@
 </head>
 <body>
 <div class="wrapper">
-
     <div class="modal-window-wrap" id="modalWrapper">
         <div class="modal-window" id="modalWindow">
             <div class="request-wrap">
@@ -39,7 +38,7 @@
         <header>
             <div class="container">
                 <div class="header-items">
-                    <a href="home" class="logo">
+                    <a href="{{ route('home')}}" class="logo">
                         <img src=" {{ asset('img/Logo-Etude-white.svg') }} " alt="Etude">
                     </a>
                     <nav class="header-menu">
@@ -54,7 +53,7 @@
                             <button type="button" class="contact-form-wrap" id="openModal"></button>
                             <p>Заявка</p>
                         </div>
-                        <a class="user" href="user">
+                        <a class="user" href="{{ route('user') }}">
                             <button type="button" class="user-logo" id="userLog"></button>
                             <p>Профиль</p>
                         </a>
@@ -64,20 +63,19 @@
         </header>
 
         @yield('content')
-
         <footer>
             <div class="footer-color">
                 <div class="container">
                     <div class="footer-container">
-                        <a href="home" class="logo">
+                        <a href="{{ route('home')}}" class="logo">
                             <img src="{{asset('img/Logo-Etude-white.svg')}}" alt="Etude">
                         </a>
                         <nav class="footer-menu">
-                            <a href="catalog" class="footer-menu-item">Каталог</a>
-                            <a href="calculator" class="footer-menu-item">Калькулятор</a>
-                            <a href="contact" class="footer-menu-item">Контакты</a>
-                            <a href="about" class="footer-menu-item">О нас</a>
-                            <a href="feedback" class="header-menu-item">Отзывы</a>
+                            <a href="{{ route('catalog') }}" class="header-menu-item">Каталог</a>
+                            <a href="{{route('calculator')}}" class="header-menu-item">Калькулятор</a>
+                            <a href="{{ route('contact') }}" class="header-menu-item">Контакты</a>
+                            <a href="{{ route('about') }}" class="header-menu-item">О нас</a>
+                            <a href="{{ route('feedback') }}" class="header-menu-item">Отзывы</a>
                         </nav>
                         <div class="footer-contacts">
                             <p class="footer-contacts-item">+ 7 901 578 12 98</p>
@@ -88,7 +86,6 @@
             </div>
         </footer>
     </div>
-
 </div>
 </body>
 </html>

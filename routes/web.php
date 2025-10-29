@@ -25,13 +25,7 @@ Route::get('/construct', function () {
     return view('construct');
 })->name('calculator');
 
-//Route::get('/project', function () {
-//    return view('project');
-//})->name('project');
 
-//Route::get('/review', function () {
-//    return view('review');
-//})->name('review');
 
 
 
@@ -47,12 +41,14 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::get('/posts/feedback', function () {
-    return view('feedback');
-})->name('feedback');
+//Route::get('/posts/feedback', function () {
+//    return view('feedback');
+//})->name('feedback');
+
 
 //Просмотр отзывов
 Route::get('/posts/feedback', [\App\Http\Controllers\PostController::class, 'index'])->name('feedback');
+
 
 Route::middleware('guest')->group(function () {
     Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
@@ -61,6 +57,21 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [\App\Http\Controllers\Auth\LogoutController::class, 'logout'])->name('logout');
+
+//Создание отзыва
     Route::get('/posts/post', [\App\Http\Controllers\PostController::class, 'create'])->name('create');
     Route::post('/posts/post', [\App\Http\Controllers\PostController::class, 'store'])->name('store');
+
+//    Редактирование и удаление отзыва
+    Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('edit');
+    Route::put('/posts/{id}', [PostController::class, 'update'])->name('update');
+    Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('destroy');
+
+    //Добавление проекта админом
+
+//    Route::get('/projects/project', [\App\Http\Controllers\ProjectController::class, 'take'])->name('make');
+    Route::get('projects/make', function () {
+        return view('make');
+    })->name('make');
+
 });

@@ -1,8 +1,14 @@
 @extends('template')
 
-@section('title')
-    <title>Регистрация</title>
-@endsection
+@auth
+    @section('title')
+        <title>Профиль</title>
+    @endsection
+@else
+    @section('title')
+        <title>Регистрация</title>
+    @endsection
+@endauth
 
 @section('css_file')
     <link rel="stylesheet" href="{{ asset('css/user.css') }}">
@@ -38,6 +44,9 @@
                         </section>
                         <section class="profile-projects">
                             <h2>Проекты</h2>
+                            @can('create-project')
+                                <a href="{{ route('make') }}">Создать новый проект</a>
+                            @endcan
                         </section>
                     </div>
                 @else

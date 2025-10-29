@@ -64,7 +64,10 @@ header {
 
 .post-change {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+}
+.post-change > a {
+    text-decoration: underline;
 }
 form > div {
     display: flex;

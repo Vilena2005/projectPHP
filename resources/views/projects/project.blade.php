@@ -11,19 +11,14 @@
 @section('content')
         <main>
             <div class="container">
+                @forelse($projects as $project)
                 <section class="preview-project">
                     <div class="preview-items">
-                        <h1 class="title">Суть Фадо</h1>
-                        <p class="title-text">
-                            Это большой и великолепный
-                            дом в португальском стиле — дом, в котором
-                            продумана каждая деталь.  Атмосфера в интерьере очень
-                            спокойная. Но везде нужен баланс, поэтому мы дополнили
-                            спокойный характер интерьера чем-то более самобытным,
-                            нетрадиционным и резким.
-                        </p>
+                        <h1 class="title">{{ $project->title }}</h1>
+                        <p class="title-text">{{ $project->description }}</p>
                     </div>
                 </section>
+                @endforelse
             </div>
             <div class="container">
                 <section class="project-info">

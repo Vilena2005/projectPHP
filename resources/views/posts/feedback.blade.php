@@ -27,15 +27,18 @@
                         <p>{{ $post->feedback_text }}</p>
 
                         <div class="post-change">
-                            <a href="#" class="">Изменить</a>
-                            <a href="#" class="">Удалить</a>
-                        </div>
+                            <a href="{{ route('edit', $post->id) }}" class="">Изменить</a>
 
+                            <form action="{{ route('destroy', $post->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button>Удалить</button>
+                            </form>
+                        </div>
                     </div>
                     @empty
                         <p>Пока нет отзывов</p>
                     @endforelse
-
                 </div>
             </div>
         </div>

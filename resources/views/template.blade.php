@@ -13,10 +13,14 @@
 <body>
 <div class="wrapper">
     <div class="modal-window-wrap" id="modalWrapper">
-        <div class="modal-window" id="modalWindow">
-            <div class="request-wrap">
 
-                <form method="post" class="modal-form">
+        <div class="modal-window" id="modalWindow">
+            <div class="close-wrap">
+                <button class="close-btn" id="buttonClose"></button>
+            </div>
+
+            <div class="request-wrap">
+                <form class="modal-form">
                     <input type="text" class="modal-form-text" placeholder="Ваш город">
                     <input type="text" class="modal-form-text" placeholder="ФИО" >
                     <input type="tel" class="modal-form-text" placeholder="Телефон">
@@ -49,10 +53,12 @@
                         <a href="{{ route('feedback') }}" class="header-menu-item">Отзывы</a>
                     </nav>
                     <div class="link-wrap">
+                        @auth
                         <div class="request">
                             <button type="button" class="contact-form-wrap" id="openModal"></button>
                             <p>Заявка</p>
                         </div>
+                        @endauth
                         <a class="user" href="{{ route('user') }}">
                             <button type="button" class="user-logo" id="userLog"></button>
                             <p>Профиль</p>

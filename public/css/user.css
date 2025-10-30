@@ -63,23 +63,21 @@ form > div {
     gap: 50px;
     margin: 50px 0 50px;
 }
-
 .profile {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-
 .user-info {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-
 .feedbacks {
     display: flex;
 }
-
 .logout-btn {
     text-decoration: underline;
 }
+
+

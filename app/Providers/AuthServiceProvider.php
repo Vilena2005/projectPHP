@@ -16,6 +16,12 @@ class AuthServiceProvider extends ServiceProvider
         //
     ];
 
+    protected function username()
+    {
+        return 'login';
+    }
+
+
     /**
      * Register any authentication / authorization services.
      */

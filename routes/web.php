@@ -49,12 +49,13 @@ Route::get('/login', function () {
 //Просмотр отзывов
 Route::get('/posts/feedback', [\App\Http\Controllers\PostController::class, 'index'])->name('feedback');
 
-
+//Роль гостя
 Route::middleware('guest')->group(function () {
     Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
     Route::post('/login', [\App\Http\Controllers\Auth\AuthController::class, 'login'])->name('login');
 });
 
+//Роль авторизированного пользователя
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [\App\Http\Controllers\Auth\LogoutController::class, 'logout'])->name('logout');
 
@@ -73,5 +74,4 @@ Route::middleware('auth')->group(function () {
     Route::get('projects/make', function () {
         return view('make');
     })->name('make');
-
 });

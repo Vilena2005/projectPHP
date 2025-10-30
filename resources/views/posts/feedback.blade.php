@@ -15,7 +15,11 @@
                 <h2>Отзывы</h2>
 
                 <div class="feedback-section">
+                    @auth
                     <a href="{{ route('create') }}">Написать отзыв</a>
+                    @else
+                    <p>Войдите в профиль, чтобы написать отзыв</p>
+                    @endauth
 
                     @forelse($posts as $post)
                     <div class="feedback-item">
@@ -26,15 +30,19 @@
 
                         <p>{{ $post->feedback_text }}</p>
 
+                        @auth
                         <div class="post-change">
+                            @if($post->user_id === auth()->id())
                             <a href="{{ route('edit', $post->id) }}" class="">Изменить</a>
 
                             <form action="{{ route('destroy', $post->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button>Удалить</button>
+                                <button class="delete-btn">Удалить</button>
                             </form>
+                            @endif
                         </div>
+                        @endauth
                     </div>
                     @empty
                         <p>Пока нет отзывов</p>

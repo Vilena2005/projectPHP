@@ -13,14 +13,22 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $validated = $request->validate ([
-            'login' => 'required',
-            'password' => 'required',
+        $request->validate ([
+            'login' => 'required|string',
+            'password' => 'required|string',
         ]);
+//        Первый вариант без ничего
+//        if (Auth::attempt($validated)) {
+//            return redirect('user');
+//        }
 
-        if (Auth::attempt($validated)) {
-            return redirect('user');
+        if (!Auth::attempt($request->only('login', 'password'))) {
+            return back()->withErrors([
+                'login' => 'Неверный логин или пароль',
+            ])
+                ->withInput($request->only('login'));
         }
-        return redirect('login');
+
+        return redirect('user');
     }
 }

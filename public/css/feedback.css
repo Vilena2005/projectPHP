@@ -68,12 +68,22 @@ header {
 }
 .post-change > a {
     text-decoration: underline;
+    color: #060606;
 }
 form > div {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-
+.delete-btn {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 18px;
+    border: transparent;
+    background-color: transparent;
+    color: #060606;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 

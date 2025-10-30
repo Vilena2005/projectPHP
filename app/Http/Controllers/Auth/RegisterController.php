@@ -17,7 +17,7 @@ class RegisterController extends Controller
             'name' => 'required|min:3|max:255',
             'email'=> 'required|email|min:5|max:255',
             'login' => 'required|string|min:3|max:255|unique:users',
-            'password' => 'required|string|min:8',
+            'password' => 'required|string|min:8|regex:/[a-zA-Z]/|regex:/[0-9]/',
         ]);
 
         $user = User::create([

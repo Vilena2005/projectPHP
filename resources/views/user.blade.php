@@ -19,7 +19,6 @@
             <div class="container">
                 @auth
                     <div class="profile-sections">
-
                         <section class="profile">
                             <h2>Профиль</h2>
                             <div class="user-info-container">
@@ -56,20 +55,22 @@
                             @csrf
                             <input type="text" name="name" class="modal-form-text" placeholder="Имя" >
                             @error('name')
-                            <div class="error-message">Имя должно быть минимум 3 символа</div>
+                                <div class="error-message">Имя должно быть минимум 3 символа</div>
                             @enderror
+
                             <input type="email" name="email" class="modal-form-text" placeholder="Эл. почта">
                             @error('email')
-                            <div class="error-message">Почта некорректна</div>
+                                <div class="error-message">Почта некорректна</div>
                             @enderror
 
                             <input type="text" name="login" class="modal-form-text" placeholder="Придумайте логин">
                             @error('login')
-                            <div class="error-message">Логин должен быть минимум 3 символа</div>
+                                <div class="error-message">Логин должен быть минимум 3 символа</div>
                             @enderror
+
                             <input type="password" name="password" class="modal-form-text" placeholder="Придумайте пароль">
                             @error('password')
-                            <div class="error-message">Пароль должен быть минимум 8 символов</div>
+                                <div class="error-message">Пароль должен быть минимум 8 символов и содержать минимум одну букву и цифру</div>
                             @enderror
                             <div>
                                 <p>Уже есть аккаунт?</p>
@@ -80,7 +81,6 @@
                                 <button type="submit" class="btn-submit">Регистрация</button>
                             </div>
                         </form>
-
                     </section>
                 @endauth
 
